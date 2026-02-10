@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* =========================
+   Variables base
+========================= */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* =========================
+   Dark mode (opcional)
+========================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* =========================
+   Body base
+========================= */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   Animaciones existentes
+========================= */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide {
+  animation: fadeSlide 0.35s ease-out;
+}
+
+/* =========================
+   ✨ Luces flotantes (XV elegante)
+========================= */
+@keyframes float {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float 14s linear infinite;
+}
+@keyframes pageInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px) rotateY(-8deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+@keyframes pageInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px) rotateY(8deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+.page-right {
+  animation: pageInFromRight 0.5s ease;
+  transform-origin: left center;
+}
+
+.page-left {
+  animation: pageInFromLeft 0.5s ease;
+  transform-origin: right center;
+}
+.page-shadow {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+/* 📖 Animación pasar página - elegante */
+
+.page-right {
+  animation: pageRight 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left center;
+}
+
+.page-left {
+  animation: pageLeft 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: right center;
+}
+
+.page-shadow {
+  position: relative;
+}
+
+.page-shadow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 25px rgba(155, 28, 28, 0.15);
+  pointer-events: none;
+}
+
+@keyframes pageRight {
+  from {
+    opacity: 0;
+    transform: perspective(900px) rotateY(-12deg) translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pageLeft {
+  from {
+    opacity: 0;
+    transform: perspective(900px) rotateY(12deg) translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
