@@ -565,15 +565,17 @@ style={{
 )}
    {/* REGALO */}
 {paginaActual === "regalo" && (
-  <div className={pageClass}>
+  <div className={`${pageClass} flex flex-col items-center space-y-8`}>
+    
     <div
       className="
-        bg-white/80
+        bg-white/85
         rounded-2xl
-        px-8 py-8
+        px-8 py-10
         shadow-[0_12px_35px_rgba(155,28,28,0.18)]
-        space-y-6
         text-center
+        space-y-6
+        max-w-md
       "
     >
       <h2 className="text-2xl font-semibold text-[#9B1C1C]">
@@ -585,9 +587,16 @@ style={{
       </p>
 
       <p className="text-gray-600 italic">
-        Si deseas tener un detalle adicional, durante la celebración habrá un buzón dispuesto con cariño para recibir sobres ✉️.
+        Pero si deseas tener un detalle adicional, durante la celebración
+        habrá un buzón dispuesto con cariño para recibir sobres.
       </p>
+
+      {/* SOBRE ANIMADO */}
+      <div className="flex justify-center pt-4">
+        <div className="envelope-elegant"></div>
+      </div>
     </div>
+
   </div>
 )}
 
