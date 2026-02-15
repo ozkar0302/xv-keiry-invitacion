@@ -676,25 +676,43 @@ style={{
           >
             ← Anterior
           </button>
-          <button
-            onClick={siguiente}
-            disabled={idx === paginas.length - 1}
-           className="
-  px-8 py-3
-  rounded-full
-  text-white
-  font-medium
-  tracking-wide
-  bg-gradient-to-r from-[#ED2024] to-[#9B1C1C]
-  shadow-[0_8px_25px_rgba(155,28,28,0.45)]
-  hover:scale-105
-  hover:shadow-[0_12px_35px_rgba(155,28,28,0.6)]
-  transition
-"
+          {paginaActual === "regalo" ? (
+  <button
+    onClick={() => window.location.href = "/"}
+    className="
+      px-8 py-3
+      rounded-full
+      text-white
+      font-medium
+      tracking-wide
+      bg-gradient-to-r from-[#9B1C1C] to-[#ED2024]
+      shadow-[0_8px_25px_rgba(155,28,28,0.45)]
+      hover:scale-105
+      transition
+    "
+  >
+    Regresar al inicio ✨
+  </button>
+) : (
+  <button
+    onClick={siguiente}
+    disabled={idx === paginas.length - 1}
+    className="
+      px-8 py-3
+      rounded-full
+      text-white
+      font-medium
+      tracking-wide
+      bg-gradient-to-r from-[#ED2024] to-[#9B1C1C]
+      shadow-[0_8px_25px_rgba(155,28,28,0.45)]
+      hover:scale-105
+      transition
+    "
+  >
+    Siguiente →
+  </button>
+)}
 
-          >
-            Siguiente →
-          </button>
         </div>
       </div>
       {fotoAbierta && (
