@@ -6,8 +6,7 @@ import confetti from "canvas-confetti";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
-
-const paginas = ["inicio", "evento", "galeria", "dresscode", "confirmar"] as const;
+const paginas = ["inicio", "evento", "galeria", "dresscode", "confirmar", "regalo"] as const;
 type Pagina = typeof paginas[number];
 
 export default function Invitacion() {
@@ -461,10 +460,6 @@ style={{
         Dress Code
       </h2>
 
-      <p className="text-gray-700">
-        Formal / Elegante
-      </p>
-
       <div className="space-y-4 text-gray-600">
         <p>
           Nos encantará verte lucir espectacular en tonos elegantes
@@ -526,7 +521,7 @@ style={{
       ) : asistira === null ? (
         <>
           <p className="text-center">
-            ¿Nos acompañarás en este día tan especial?
+            ¿Me acompañarás en este día tan especial?
           </p>
 
           <div className="flex justify-center gap-4 pt-2">
@@ -568,7 +563,33 @@ style={{
     </div>
   </div>
 )}
+   {/* REGALO */}
+{paginaActual === "regalo" && (
+  <div className={pageClass}>
+    <div
+      className="
+        bg-white/80
+        rounded-2xl
+        px-8 py-8
+        shadow-[0_12px_35px_rgba(155,28,28,0.18)]
+        space-y-6
+        text-center
+      "
+    >
+      <h2 className="text-2xl font-semibold text-[#9B1C1C]">
+        Con cariño
+      </h2>
 
+      <p className="text-gray-700">
+        El mejor regalo será contar con tu presencia en este día tan especial.
+      </p>
+
+      <p className="text-gray-600 italic">
+        Si deseas tener un detalle adicional, durante la celebración habrá un buzón dispuesto con cariño para recibir sobres ✉️.
+      </p>
+    </div>
+  </div>
+)}
 
         {/* GALERÍA */}
 {paginaActual === "galeria" && (
