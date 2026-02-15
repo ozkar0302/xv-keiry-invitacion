@@ -676,9 +676,9 @@ style={{
           >
             ← Anterior
           </button>
-          {paginaActual === "regalo" ? (
+{paginaActual === "regalo" ? (
   <button
-    onClick={() => window.location.href = "/"}
+    onClick={() => window.location.href = `/i/${slug}`}
     className="
       px-8 py-3
       rounded-full
@@ -694,6 +694,8 @@ style={{
     Regresar al inicio ✨
   </button>
 ) : (
+
+ 
   <button
     onClick={siguiente}
     disabled={idx === paginas.length - 1}
