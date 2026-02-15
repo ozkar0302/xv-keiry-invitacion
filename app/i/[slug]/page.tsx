@@ -7,7 +7,7 @@ import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
 
-const paginas = ["inicio", "evento", "galeria", "confirmar"] as const;
+const paginas = ["inicio", "evento", "galeria", "dresscode", "confirmar"] as const;
 type Pagina = typeof paginas[number];
 
 export default function Invitacion() {
@@ -347,7 +347,6 @@ style={{
   </span>
 </h2>
 
-
         {/* INICIO */}
        {paginaActual === "inicio" && (
   <div className={pageClass}>
@@ -370,8 +369,6 @@ style={{
     </div>
   </div>
 )}
-
-
         {/* EVENTO */}
         {paginaActual === "evento" && (
   <div className={`${pageClass} space-y-6`}>
@@ -393,11 +390,6 @@ style={{
           Balleza, Chihuahua 33560
         </p>
       </div>
-
-      {/* Dress code */}
-      <p className="italic">
-        👗 Dress code: Lo que te haga feliz
-      </p>
 
       {/* Contador */}
       <p className="text-sm font-semibold tracking-wide text-[#9B1C1C]">
@@ -451,6 +443,43 @@ style={{
     </div>
   </div>
 )}
+
+{/* DRESS CODE */}
+{paginaActual === "dresscode" && (
+  <div className={pageClass}>
+    <div
+      className="
+        bg-white/80
+        rounded-2xl
+        px-6 py-8
+        shadow-[0_12px_35px_rgba(155,28,28,0.18)]
+        space-y-6
+        text-center
+      "
+    >
+      <h2 className="text-2xl font-semibold text-red-800">
+        Dress Code
+      </h2>
+
+      <p className="text-gray-700">
+        Formal / Elegante
+      </p>
+
+      <div className="space-y-4 text-gray-600">
+        <p>
+          Nos encantará verte lucir espectacular en tonos elegantes
+          y acordes a una noche muy especial ✨
+        </p>
+
+        <p className="italic">
+          El color rojo ha sido reservado con mucho cariño
+          para la quinceañera ❤️
+        </p>
+      </div>
+    </div>
+  </div>
+)}
+
 
         {/* CONFIRMAR */}
         
