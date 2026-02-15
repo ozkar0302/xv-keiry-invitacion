@@ -236,10 +236,10 @@ const generarPDF = async () => {
     );
   }
 const fotos = [
-  "/galeria/cbtis.png",
-  "/galeria/fep.png",
-  "/galeria/utp.png",
-  "/galeria/logo.png",
+  "/galeria/anahi1.png",
+  "/galeria/anahi2.png",
+  "/galeria/anahi3.png",
+  
   // agrega aquí todas las reales
 ];
 
@@ -557,21 +557,46 @@ style={{
         Algunos recuerdos especiales ✨
       </p>
 
-      <div className="grid grid-cols-2 gap-4">
-        {fotos.map((foto, i) => (
-          <button
-            key={i}
-            onClick={() => setFotoAbierta(foto)}
-            className="aspect-square overflow-hidden rounded-xl shadow"
-          >
-            <img
-              src={foto}
-              alt={`Galería ${i + 1}`}
-              className="w-full h-full object-cover hover:scale-105 transition"
-            />
-          </button>
-        ))}
-      </div>
+      <div className="grid grid-cols-3 gap-4">
+
+  {/* Foto grande izquierda */}
+  <button
+    onClick={() => setFotoAbierta(fotos[0])}
+    className="col-span-2 row-span-2 overflow-hidden rounded-2xl shadow"
+  >
+    <img
+      src={fotos[0]}
+      alt="Anahi Principal"
+      className="w-full h-full object-cover hover:scale-105 transition duration-300"
+    />
+  </button>
+
+  {/* Foto derecha arriba */}
+  <button
+    onClick={() => setFotoAbierta(fotos[1])}
+    className="overflow-hidden rounded-2xl shadow"
+  >
+    <img
+      src={fotos[1]}
+      alt="Anahi2"
+      className="w-full h-full object-cover hover:scale-105 transition duration-300"
+    />
+  </button>
+
+  {/* Foto derecha abajo */}
+  <button
+    onClick={() => setFotoAbierta(fotos[2])}
+    className="overflow-hidden rounded-2xl shadow"
+  >
+    <img
+      src={fotos[2]}
+      alt="Anahi3"
+      className="w-full h-full object-cover hover:scale-105 transition duration-300"
+    />
+  </button>
+
+</div>
+
     </div>
   </div>
 )}
