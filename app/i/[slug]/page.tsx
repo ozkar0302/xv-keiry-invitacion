@@ -485,7 +485,7 @@ style={{
         </p>
 
         <p className="italic">
-          El color rojo ha sido reservado con mucho cariño
+          NOTA: El color rojo ha sido reservado con mucho cariño
           para la quinceañera ❤️
         </p>
       </div>
