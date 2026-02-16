@@ -494,9 +494,8 @@ style={{
 )}
 
 
-        {/* CONFIRMAR */}
-        
-   {paginaActual === "confirmar" && (
+       {/* CONFIRMAR */}
+{paginaActual === "confirmar" && (
   <div className={pageClass}>
     <div
       className="
@@ -504,7 +503,7 @@ style={{
         rounded-2xl
         px-8 py-6
         shadow-[0_12px_35px_rgba(155,28,28,0.18)]
-        space-y-5
+        space-y-6
       "
     >
       {rsvpExistente ? (
@@ -516,24 +515,44 @@ style={{
           </p>
 
           {rsvpExistente === "Sí" && (
-            <button
-              onClick={generarPDF}
-              className="
-                mt-4
-                px-6 py-3
-                rounded-full
-                bg-gradient-to-r from-[#C9A24D] to-[#ED2024]
-                text-white
-                shadow
-                hover:scale-105
-                transition
-              "
-            >
-              📄 Descargar invitación en PDF
-              <span className="block text-xs font-light mt-1">
-                Guárdala como recuerdo o imprímela
-              </span>
-            </button>
+            <>
+              {/* BOTÓN PDF */}
+              <button
+                onClick={generarPDF}
+                className="
+                  mt-4
+                  px-6 py-3
+                  rounded-full
+                  bg-gradient-to-r from-[#C9A24D] to-[#ED2024]
+                  text-white
+                  shadow
+                  hover:scale-105
+                  transition
+                  w-full
+                "
+              >
+                📄 Descargar invitación en PDF
+                <span className="block text-xs font-light mt-1">
+                  Guárdala como recuerdo o imprímela
+                </span>
+              </button>
+
+              {/* VIDEO DE AGRADECIMIENTO */}
+              <div className="mt-6">
+                <video
+                  src="/video/gracias.mp4"
+                  autoPlay
+                  controls
+                  playsInline
+                  className="
+                    w-full
+                    rounded-2xl
+                    shadow-xl
+                    border border-white/50
+                  "
+                />
+              </div>
+            </>
           )}
         </>
       ) : asistira === null ? (
@@ -581,6 +600,7 @@ style={{
     </div>
   </div>
 )}
+
    {/* REGALO */}
 {paginaActual === "regalo" && (
   <div className={`${pageClass} flex flex-col items-center space-y-8`}>
