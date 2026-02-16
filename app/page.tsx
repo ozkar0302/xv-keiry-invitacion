@@ -61,7 +61,7 @@ export default function Home() {
 
         <p className="mb-6 text-gray-600 tracking-wide">
           14 de Marzo de 2026 <br />
-          7:00 PM
+          7:30 PM
         </p>
 
         <p className="italic mb-10 text-gray-500">

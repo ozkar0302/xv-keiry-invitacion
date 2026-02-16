@@ -363,7 +363,7 @@ style={{
       </p>
 
       <p className="text-sm text-gray-600 tracking-wide">
-        14 de Marzo de 2026 · 7:00 PM
+        14 de Marzo de 2026 · 7:30 PM
       </p>
     </div>
   </div>
@@ -397,7 +397,7 @@ style={{
         🎉 Recepción
       </p>
       <p className="text-gray-700">
-        07:00 PM – 09:00 PM · Salón Auditorio
+        07:30 PM – 09:00 PM · Salón Auditorio
       </p>
     </div>
 
@@ -481,7 +481,7 @@ style={{
       <div className="space-y-4 text-gray-600">
         <p>
           Nos encantará verte lucir espectacular en tonos elegantes
-          y acordes a una noche muy especial ✨
+          y acordes a una noche muy especial ✨   __________
         </p>
 
         <p className="italic">
@@ -621,7 +621,7 @@ style={{
       </h2>
 
       <p className="text-gray-700">
-        El mejor regalo será contar con tu presencia en este día tan especial.
+        El mejor regalo será contar con tu presencia en este día tan especial. __________
       </p>
 
       <p className="text-gray-600 italic">
@@ -904,7 +904,7 @@ style={{
         <br />
         Misa: 06:00 PM · Parroquia San Pablo
         <br />
-        Recepción & Baile: <br /> 07:00 PM - 02:00 AM<br />
+        Recepción & Baile: <br /> 07:30 PM - 02:00 AM<br />
         Balleza, Chih.
       </p>
     
