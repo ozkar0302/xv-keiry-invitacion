@@ -371,29 +371,47 @@ style={{
         {/* EVENTO */}
         {paginaActual === "evento" && (
   <div className={`${pageClass} space-y-6`}>
-    <div
-      className="
-        bg-white/80
-        rounded-2xl
-        px-8 py-6
-        shadow-[0_12px_35px_rgba(155,28,28,0.18)]
-        space-y-5
-      "
-    >
-      {/* Lugar */}
-      <div className="space-y-1">
-        <p className="font-medium">
-          📍 Salón Auditorio Municipal
-        </p>
-        <p className="text-gray-600">
-          Balleza, Chihuahua 33560
-        </p>
-      </div>
-
-      {/* Contador */}
-      <p className="text-sm font-semibold tracking-wide text-[#9B1C1C]">
-        ⏳ <span className="text-[#C9A24D]">{tiempoRestante}</span>
+  <div
+    className="
+      bg-white/80
+      rounded-2xl
+      px-8 py-6
+      shadow-[0_12px_35px_rgba(155,28,28,0.18)]
+      space-y-6
+      text-center
+    "
+  >
+    {/* MISA */}
+    <div>
+      <p className="font-semibold text-[#9B1C1C]">
+        ⛪ Misa
       </p>
+      <p className="text-gray-700">
+        06:00 PM · Parroquia San Pablo
+      </p>
+    </div>
+
+    {/* RECEPCIÓN */}
+    <div>
+      <p className="font-semibold text-[#9B1C1C]">
+        🎉 Recepción
+      </p>
+      <p className="text-gray-700">
+        07:00 PM – 09:00 PM · Salón Auditorio
+      </p>
+    </div>
+
+    {/* UBICACIÓN GENERAL */}
+    <div>
+      <p className="text-gray-600 text-sm">
+        📍 Balleza, Chihuahua
+      </p>
+    </div>
+
+    {/* CONTADOR */}
+    <p className="text-sm font-semibold tracking-wide text-[#9B1C1C]">
+      ⏳ <span className="text-[#C9A24D]">{tiempoRestante}</span>
+    </p>
 
       {/* Acciones */}
       <div className="pt-4 space-y-4">
