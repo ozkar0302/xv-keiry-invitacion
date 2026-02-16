@@ -621,12 +621,12 @@ style={{
       </h2>
 
       <p className="text-gray-700">
-        El mejor regalo será contar con tu presencia en este día tan especial. __________
+        El mejor regalo será contar con tu presencia en este día tan especial. ❤️
       </p>
 
       <p className="text-gray-600 italic">
         Pero si deseas tener un detalle adicional, durante la celebración
-        habrá un buzón dispuesto con cariño para recibir sobres.
+        habrá un buzón dispuesto con cariño para recibir sobres ✉️ con efectivo.
       </p>
 
       {/* SOBRE ANIMADO */}
