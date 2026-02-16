@@ -3,8 +3,34 @@ import "./globals.css";
 import { Playfair_Display } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Invitación XV Años · Keiry Anahí",
-  description: "Invitación digital a los XV años de Keiry Anahí",
+  title: "Mis XV Años · Keiry Anahí",
+  description:
+    "14 de Marzo 2026 · Te espero para celebrar conmigo una noche inolvidable ✨",
+
+  openGraph: {
+    title: "Mis XV Años · Keiry Anahí",
+    description: "14 de Marzo 2026 · Una celebración muy especial",
+    url: "https://xv-keiry-invitacion.vercel.app",
+    siteName: "Invitación XV Keiry",
+    images: [
+      {
+        url: "https://xv-keiry-invitacion.vercel.app/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "es_MX",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Mis XV Años · Keiry Anahí",
+    description: "14 de Marzo 2026 · Te espero 💖",
+    images: [
+      "https://xv-keiry-invitacion.vercel.app/og-image.jpg",
+    ],
+  },
 };
 
 const playfair = Playfair_Display({

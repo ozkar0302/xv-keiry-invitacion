@@ -651,7 +651,7 @@ style={{
       "
     >
       <p className="italic text-gray-600 text-center">
-        Algunos recuerdos especiales ✨
+        Algunos recuerdos especiales, revisa la galeria ✨
       </p>
 
       <div className="grid grid-cols-3 gap-4">
